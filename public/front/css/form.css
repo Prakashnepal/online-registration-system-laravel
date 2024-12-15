@@ -1,0 +1,70 @@
+.stu-info {
+    padding-bottom: 20px !important;
+}
+.stu-info1 {
+    padding-bottom: 10px;
+}
+
+.btn-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+
+    margin-top: 2em !important;
+    justify-content: space-between !important;
+}
+form > fieldset:not(.btn-group) {
+    display: none;
+    -webkit-animation: fadeIn.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fadeIn.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+form > fieldset.active {
+    display: block;
+}
+.btn-group [class*="btn"] {
+    background-color: rgb(14, 98, 14);
+    color: white;
+    padding: 1em 2.5em;
+    border: 4px solid rgb(7, 122, 22);
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s, border-color 0.3s ease-out;
+    transition: background-color 0.3s, border-color 0.3s ease-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10%);
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.btn-group [class*="btn"]:disabled {
+    background-color: gray;
+    border-color: brown;
+    cursor: text;
+}
+.btn-group [class*="btn"]:hover:not(:disabled) {
+    background-color: blue;
+    border-color: blanchedalmond;
+}
+.btn-group .btn-submit,
+.form-four.active ~ .btn-group .btn-next {
+    display: none;
+}
+.form-four.active ~ .btn-group .btn-submit {
+    display: block;
+}
+
+.btn-group .btn-submit,
+.form-one.active ~ .btn-group .btn-prev {
+    display: none;
+}
+
+.btn-group .form-one.active .btn-next {
+    /* float: right; */
+    padding-right: 50px;
+}
